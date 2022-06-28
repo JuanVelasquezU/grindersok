@@ -1,0 +1,41 @@
+/* MIX IN */
+/* letra header */
+@mixin letraRegular {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    color: $blanco;
+}
+
+/* letra grinder */
+@mixin letraGrinder {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    color: $blanco;
+}
+
+@mixin letraTexto {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: $blanco;
+}
+
+@mixin letraTexto2 {    
+    font-family: 'Lato', sans-serif;
+    color: $blanco;
+    font-weight: 400;
+}
+
+/* m=0 p=0 */
+@mixin ceroMP{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* centrado */
+@mixin centrado{
+    display: block;
+    margin: auto;
+}

@@ -1,0 +1,736 @@
+/* MOBILE */
+@media screen and (max-width: 575px) {
+  
+/* INDEX */
+
+/* HEADER */
+/* navbar */
+#navbar-brandDesktop1{
+    display: none;
+}
+#navbar-brandDesktop2{
+    display: block;
+    margin: 1rem;
+}
+.navbar{
+    button{
+        margin: 1rem;
+    }
+}
+#navbarSupportedContent{
+    margin: 10px 0 10px 0;
+    text-align: center;
+    @include letraRegular;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400; 
+}
+
+/* main */
+.mainIndex{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    width: 100%;
+    h1{
+        padding: 4rem 4rem 2rem 4rem;
+        margin: 0;
+        text-align: center;
+        font-size: 50px;
+        @include letraGrinder;
+    }
+    h3{
+        @include letraTexto2;
+        @include centrado;
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0.1rem;
+
+    }
+    button{
+        @include centrado;
+        margin-top: 2rem;
+        background-color: $verde;
+        border-radius: 10px;
+        border: none;
+        padding: 5px 5px 2px 5px;
+        cursor: pointer;
+        img{
+            width: 23px;
+            height: 23px;
+            margin: 6px 6px 14px 6px;
+        }
+        a{
+            @include letraTexto2;
+            font-size: 15px;
+            color: $negro;
+            text-decoration: none;
+        }
+        &:hover{
+            background-color: $hover;
+            letter-spacing: 0.03rem;
+        }
+    }
+    div{
+        padding: 2rem 4rem 2rem 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        div{
+            padding: 4px;
+            display: flex;
+            i{  
+                color: $blanco;
+                margin: 0.5rem;
+                font-size: 32px;
+                &:hover{
+                    color: $hover;
+                }
+            }
+        }
+    }
+}
+
+/* section */
+/* section carousel */
+.mainCarousel1{
+    margin: 3rem 0rem 3rem 0rem;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* section picadores */
+.sectionIndex__picadores{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    .indexPicadores{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        img{
+            @include centrado;
+            margin: 10px;
+            height: 40px;
+            width: 40px;
+        }
+        h4{
+            @include letraRegular;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 400;
+            margin: 10px;
+        }
+    }
+    .indexPicadores__cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        div{
+            border: 3px solid $verde;
+            border-radius: 20px;
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            width: 300px;
+            z-index: 0;
+            img{
+                width: 200px;
+                height: auto;
+                @include centrado;
+                transition: all 0.3s;
+            }
+            p{
+                border: 1px solid $verde;
+                border-radius: 20px;
+                text-align: center;
+                @include letraRegular;
+                font-size: 18px;
+                padding: 1rem 0rem 1rem 0rem;
+                margin: 2rem 0.5rem 0.5rem 0.5rem;
+                transition: all 0.3s;
+            }
+            &:hover img{
+                filter: blur(1.1px) brightness(20%);
+                transform: scale(1.1);
+                transition: all 0.3s;
+            }
+            &:hover p{
+                display: none;
+                transition: all 0.3s;
+            }
+            &:hover {
+                border: 3px solid $hover;
+            }
+            .cardEfecto{
+                z-index: 10;
+                text-align: center;
+                color: $blanco;
+                @include letraRegular;
+                margin: 0;
+                border: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                .efecto{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    margin: 0;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    bottom: 100%;
+                    transition: all 0.3s;
+                    h6{
+                        font-size: 24px;
+                        font-weight: 700;
+                        margin: 2rem;
+                    }
+                    p{
+                        font-size: 15px;
+                        color: $blanco;
+                        border: none;
+                        margin: 1rem;
+                    }
+                    button{
+                        @include centrado;
+                        margin: 2rem;
+                        border: 0.2px solid $blanco;
+                        border-radius: 10px;
+                        background-color: $fondo;
+                        color: $blanco;
+                        width: 50%;
+                        height: 2rem;
+                    }
+                }
+            }
+            &:hover .efecto{
+                bottom: 0;
+                transition: all 0.3s;
+            }
+            &:hover .efectoP{
+                display: block;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+
+.sectionIndex__accesorios{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    .indexAccesorios{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        img{
+            @include centrado;
+            margin: 10px;
+            height: 40px;
+            width: 40px;
+        }
+        h4{
+            @include letraRegular;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 400;
+            margin: 10px;
+        }
+    }
+    .indexAccesorios__cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        div{
+            border: 3px solid $verde;
+            border-radius: 20px;
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            width: 300px;
+            z-index: 0;
+            img{
+                width: 200px;
+                height: auto;
+                @include centrado;
+                transition: all 0.3s;
+            }
+            p{
+                border: 1px solid $verde;
+                border-radius: 20px;
+                text-align: center;
+                @include letraRegular;
+                font-size: 18px;
+                padding: 1rem 0rem 1rem 0rem;
+                margin: 2rem 0.5rem 0.5rem 0.5rem;
+                transition: all 0.3s;
+            }
+            &:hover img{
+                filter: blur(1.1px) brightness(20%);
+                transform: scale(1.3);
+                transition: all 0.3s;
+            }
+            &:hover p{
+                display: none;
+                transition: all 0.3s;
+            }
+            &:hover {
+                border: 3px solid $hover;
+            }
+            .cardEfecto{
+                z-index: 10;
+                text-align: center;
+                color: $blanco;
+                @include letraRegular;
+                margin: 0;
+                border: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                .efecto{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    margin: 0;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    bottom: 100%;
+                    transition: all 0.3s;
+                    h6{
+                        font-size: 24px;
+                        font-weight: 700;
+                        margin: 2rem;
+                    }
+                    p{
+                        font-size: 15px;
+                        color: $blanco;
+                        border: none;
+                        margin: 1rem;
+                    }
+                    button{
+                        @include centrado;
+                        margin: 2rem;
+                        border: 0.2px solid $blanco;
+                        border-radius: 10px;
+                        background-color: $fondo;
+                        color: $blanco;
+                        width: 50%;
+                        height: 2rem;
+                    }
+                }
+            }
+            &:hover .efecto{
+                bottom: 0;
+                transition: all 0.3s;
+            }
+            &:hover .efectoP{
+                display: block;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+
+.sectionIndex__giratorio{
+    display: none;
+}
+
+.sectionIndex__combos{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0rem 3rem 0rem;
+    .indexCombos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        img{
+            @include centrado;
+            margin: 10px;
+            height: 40px;
+            width: 40px;
+        }
+        h4{
+            @include letraRegular;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 400;
+            margin: 10px;
+        }
+    }
+}
+
+.indexCombos__promo{
+    margin: 2rem 0rem 2rem 0rem;
+    .comboPromo{
+        img{
+            width: 100%;
+            height: auto;
+        }
+        p{
+            @include letraTexto2;
+            font-size: 20px;
+            font-weight: 700;
+            color: $negro;
+        }
+    }
+    .promo__texto{
+        p{
+            display: none;
+        }
+        button{
+            @include centrado;
+            margin-top: 2rem;
+            background-color: $verde;
+            border-radius: 10px;
+            border: none;
+            padding: 5px 5px 2px 5px;
+            cursor: pointer;
+            img{
+                width: 23px;
+                height: 23px;
+                margin: 6px 6px 14px 6px;
+            }
+            a{
+                @include letraTexto2;
+                font-size: 15px;
+                color: $negro;
+                text-decoration: none;
+            }
+            &:hover{
+                background-color: $hover;
+                letter-spacing: 0.03rem;
+            }
+        }
+    }
+}
+
+.sectionIndex__marcas{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    .indexMarcas{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        img{
+            @include centrado;
+            margin: 10px;
+            height: 40px;
+            width: 40px;
+        }
+        h4{
+            @include letraGrinder;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 400;
+            margin: 10px;
+        }
+    }
+    .indexMarcas__cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        div{
+            margin: 1rem;
+        }
+        img{
+            width: 110px;
+            height: auto;
+            @include centrado;
+            margin: 1rem;
+        }
+    }
+}
+
+.sectionIndex__compra{
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        i{
+            padding: 0;
+            margin: 1rem;
+            color: $form;
+            font-size: 30px;
+        }
+        h4{
+            padding: 0;
+            margin: 1rem;
+            @include letraTexto;
+            font-weight: 300;
+            font-size: 20px;
+        }
+    }
+}
+
+
+/* NOSOTROS */
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nosotrosInfo{
+    margin: 1rem 2rem 1rem 2rem;
+    h2{
+        @include letraGrinder;
+        font-size: 24px;
+        letter-spacing: 0.03rem;
+        padding: 10px;
+        margin: 0px;
+        text-align: center;
+    }
+    h6{
+        @include letraTexto;
+        text-align: center;
+        font-size: 18px;
+        padding: 10px;
+        margin: 0px;
+    }
+    p{
+        @include letraTexto;
+        font-weight: 200;
+        font-size: 18px;
+        padding: 10px 0px 10px 0px;
+        margin: 0px;
+    }
+}
+.nosotrosFoto{
+    @include centrado;
+    margin: 2rem;
+    img{
+        width: 22rem;
+        height: auto;
+    }
+}
+
+/* CONTACTO */
+.mainContacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sectionFormulario{
+    width: 90%;
+    margin: 1rem 0rem 1rem 0rem;
+    div{
+        h2{
+            @include letraTexto;
+            font-size: 24px;
+            font-weight: 300;
+            margin: 20px;
+            text-align: center;
+        }
+        form{
+            text-align: center;
+            ::placeholder{
+                color: $blanco;
+            }
+            input{
+                width: 90%;
+                height: 30px;
+                margin: 10px;
+                padding: 10px;
+                background-color: $fondo;
+                border: solid $blanco 2px;
+                border-radius: 8px;
+                color: $blanco;
+            }
+            .formulario__flex{
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                input{
+                    width: 90%;
+                }
+            }
+            textarea{
+                text-align: center;
+                margin: 10px;
+                padding: 10px;
+                width: 90%;
+                height: 150px;
+                background-color: $fondo;
+                color: $blanco;
+                border: solid $blanco 2px;
+                border-radius: 8px;
+            }
+            .form__boton{
+                text-align: center;
+                margin: 10px;
+                padding: 5px;
+                width: 35%;
+                height: 40px;
+                border: solid $negro 2px;
+                border-radius: 8px;
+                font-weight: 600;
+                background-color: $form;
+                color: $fondo;
+            }
+        }
+    }
+}
+.sectionIconos{
+    width: 90%;
+    margin: 1rem;
+    a{
+        img{
+            @include centrado;
+            width: 200px;
+            height: auto;
+        }
+    }
+    .icons__inputs{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px;
+        i{
+            padding: 0;
+            margin: 1rem;
+            color: $form;
+            font-size: 22px;
+        }
+        h4{
+            padding: 0;
+            margin: 1rem;
+            @include letraTexto;
+            font-weight: 300;
+            font-size: 18px;
+
+        }
+    }
+}
+
+
+/* FOOTER */
+.footer{
+    background-color: $negro;
+    width: 100%;
+    height: auto;
+}
+.footerGrinder{
+    padding: 40px; 
+    text-align: center;
+    @include letraGrinder;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 0.03rem;
+    margin: 0px;
+}
+.footerImg{
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        @include ceroMP;
+        @include letraRegular;
+        font-size: 15px;
+        li{
+            width: 25%;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            padding: 10px;
+            text-align: center;
+            p{
+                margin: 5px;
+            }
+            img{
+                padding: 5px;
+                @include centrado;
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+}
+.footerTexto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include letraRegular;
+    margin-top: 1.5rem;
+}
+.footerInfo{
+    width: 100%;
+    h6{
+        font-size: 18px;
+        @include ceroMP;
+        margin: 1rem 2rem 1rem 2rem;
+    }
+    .footerInfo__email{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        i{
+            margin: 10px;
+            font-size: 16px;
+        }
+        p{
+            margin: 10px;
+            font-size: 16px;
+        }
+    }
+    p{
+        margin: 10px;
+        font-size: 16px;
+    }
+}
+.footerContacto{
+    width: 100%;
+    margin-top: 1.5rem;
+    h6{
+        font-size: 18px;
+        @include ceroMP;
+        margin: 10px;
+        text-align: end;
+    }
+    .footerContacto__redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        i{
+            text-align: start;
+            margin: 10px;
+            font-size: 20px;
+        }
+        p{
+            text-align: start;
+            margin: 10px;
+            font-size: 16px; 
+        }
+    }
+}
+
+
+}
+
